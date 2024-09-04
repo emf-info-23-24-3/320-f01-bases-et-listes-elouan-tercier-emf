@@ -1,26 +1,23 @@
 package app;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
+import models.Personne;
+
 public class Application {
 
     public static void main(String[] args) {
 
-        //  --------------------------------------------------        
-        //           __     _____ _____ ____  _____ 
-        //           \ \   / / _ \_   _|  _ \| ____|
-        //            \ \ / / | | || | | |_) |  _|  
-        //             \ V /| |_| || | |  _ <| |___ 
-        //              \_/__\___/_|_|_|_| \_\_____|
-        //                / ___/ _ \|  _ \| ____|   
-        //               | |  | | | | | | |  _|     
-        //               | |__| |_| | |_| | |___    
-        //                \____\___/|____/|_____|   
-        //                    |_ _/ ___|_ _|        
-        //                     | | |    | |         
-        //                     | | |___ | |         
-        //                    |___\____|___|        
-        //                                                  
-        //  ---------------------------------------------------
+        ArrayList<Personne> list = new ArrayList<Personne>();
 
+        list.add(new Personne("Elouan", "Tercier", "Rte Estevenens 94", 1687));
+        list.add(new Personne("jack", "moullet", "Rte ens 94", 1677));
+        list.add(new Personne("kilian", "meyaer", "afdsds 94", 2687));
+
+        for (Personne personne : list) {
+            System.out.println(personne.getNom());
+        }
     }
 
 }
